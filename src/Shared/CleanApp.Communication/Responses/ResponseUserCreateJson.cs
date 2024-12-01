@@ -1,4 +1,4 @@
-﻿namespace CleanApp.Communication
+﻿namespace CleanApp.Communication.Responses
 {
     public class ResponseUserCreateJson
     {

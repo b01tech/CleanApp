@@ -1,4 +1,4 @@
-﻿namespace CleanApp.Communication;
+﻿namespace CleanApp.Communication.Requests;
 public class RequestUserCreateJson
 {
     public string Name { get; set; } = string.Empty;
