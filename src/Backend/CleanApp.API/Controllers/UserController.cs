@@ -14,7 +14,6 @@ public class UserController : ControllerBase
     public IActionResult Create(RequestUserCreateJson request)
     {
         var usecase = new UserCreateUseCase();
-        usecase.Validate(request);
         var response = usecase.Execute(request);
         return Created(string.Empty, response);
     }
