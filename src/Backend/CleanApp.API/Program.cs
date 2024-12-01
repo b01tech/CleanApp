@@ -1,14 +1,15 @@
+using CleanApp.API.Filters;
+using CleanApp.API.Middlewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -18,6 +19,8 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = string.Empty;
     });
 }
+
+app.UseMiddleware<CultureMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseRouting();

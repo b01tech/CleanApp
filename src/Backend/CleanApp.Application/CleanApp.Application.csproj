@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Shared\CleanApp.Communication\CleanApp.Communication.csproj" />
     <ProjectReference Include="..\..\Shared\CleanApp.Exception\CleanApp.Exception.csproj" />
     <ProjectReference Include="..\CleanApp.Domain\CleanApp.Domain.csproj" />
